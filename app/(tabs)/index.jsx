@@ -2,11 +2,12 @@ import {
   Image,
   StyleSheet,
   Platform,
+  Button,
   FlatList,
   View,
   Text,
 } from "react-native";
-import React from "react";
+import React, {useState} from "react";
 import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
@@ -17,33 +18,31 @@ export default function HomeScreen() {
   const images = [
     {
       id: "1",
-      src: require('@/assets/images/partial-react-logo.png'),
-      
+      src: { uri: 'https://imgs.elpais.com.uy/dims4/default/89ad95d/2147483647/strip/true/crop/6004x4128+139+0/resize/1440x990!/quality/90/?url=https%3A%2F%2Fel-pais-uruguay-production-web.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fc5%2F81%2F1b4307484319bc3fe109a74fef16%2Fthe-strongest-vs-pena-17997475.jpg' }, 
       description: "imagen 1",
     },
     {
       id: "2",
-      src: require('@/assets/images/favicon.png'),
+      src: { uri: 'https://cdn.pixabay.com/photo/2024/02/22/05/40/natural-scenery-8589165_640.jpg' }, 
       description: "imagen 2",
     },
     {
       id: "3",
-      src: require('@/assets/images/icon.png'),
+      src: { uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7PixZnCUpWjg-5MOpAKn6A92tSolXBqfIAA&s' }, 
       description: "imagen 3",
     },
     {
       id: "4",
-      src: require('@/assets/images/partial-react-logo.png'),
+      src: { uri: 'https://st5.depositphotos.com/64145070/64693/i/450/depositphotos_646930840-stock-photo-sunset-ocean-beach-beautiful-seascape.jpg' }, 
       description: "imagen 4",
     },
     {
       id: "5",
-      src: require('@/assets/images/react-logo@3x.png'),
+      src: { uri: 'https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?cs=srgb&dl=pexels-souvenirpixels-1619317.jpg&fm=jpg' }, 
       description: "imagen 5",
     },
   ];
-  // No se porque no me cargan kas imagenes, me da un error de carga, probe mil cosas y no pude solucionarlo, en el ta1 subi una imagen del logo con ese mismo formato
-  // de ruta y no me dio ningun problema
+ 
 
   // Boton para cambiar imagenes
 
